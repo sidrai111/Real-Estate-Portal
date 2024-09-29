@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Home</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <div class="seller-home-container">
+        <h1>Seller Dashboard</h1>
+        <div id="property-list">
+            <!-- Property Cards will be dynamically added here -->
+            
+            <!-- add property card button -->
+  
+        </div>
+    
+        <!-- Property Details Modal -->
+       <div class="container">
+        <div id="property-details-modal" class="modal">
+            <!-- Content will be displayed here -->
+        </div>
+  
+        <!-- Add the update form below the property details modal -->
+<div id="update-form" class="modal">
+    <h2>Update Property</h2>
+    <form id="property-update-form" action="../backend/update_property.php" method="POST">
+        <label for="location-update">Location:</label>
+        <input type="text" id="location-update" name="location" required><br><br>
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age-update" name="age" required><br><br>
+
+        <label for="floor-plan">Floor Plan (Square Footage):</label>
+        <input type="number" id="floor-plan-update" name="floor_plan" required><br><br>
+
+        <label for="bedrooms">Number of Bedrooms:</label>
+        <input type="number" id="bedrooms-update" name="bedrooms" required><br><br>
+
+        <label for="facilities">Additional Facilities:</label>
+        <input type="text" id="facilities-update" name="facilities"><br><br>
+
+        <label for="garden">Presence of Garden:</label>
+        <input type="checkbox" id="garden-update" name="garden"><br><br>
+
+        <label for="parking">Parking Availability:</label>
+        <input type="radio" id="parking-yes-update" name="parking" value="Yes"> Yes
+        <input type="radio" id="parking-no-update" name="parking" value="No"> No<br><br>
+
+        <label for="proximity-facilities">Proximity to Nearby Facilities:</label>
+        <input type="text" id="proximity-facilities-update" name="proximity_facilities"><br><br>
+
+        <label for="proximity-roads">Proximity to Main Roads:</label>
+        <input type="text" id="proximity-roads-update" name="proximity_roads"><br><br>
+
+        <label for="property-value">Property Value:</label>
+        <input type="number" id="property-value-update" name="property_value" required><br><br>
+
+        
+        <input type="hidden" id="property-id-update" name="property_id" value="">
+        
+        <input type="submit" value="Save Changes">
+        <button onclick="closeUpdateForm()">Cancel</button>
+    </form>
+</div>
+
+        </div>
+        
+    </div>
+    <script src="propScript.js"></script>
+</body>
+</html>

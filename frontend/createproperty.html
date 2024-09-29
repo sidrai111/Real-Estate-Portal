@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Property</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <h1>Create Property</h1>
+    <form id="property-form" action="../backend/submit_property.php" method="POST" enctype="multipart/form-data">
+        <label for="location">Location:</label>
+        <input  type="text" id="location" name="location" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="floor-plan">Square Footage:</label>
+        <input type="number" id="floor-plan" name="floor_plan" required><br><br>
+
+        <label for="bedrooms">Number of Bedrooms:</label>
+        <input type="number" id="bedrooms" name="bedrooms" required><br><br>
+        
+        <label for="baths">Number of Bathrooms:</label>
+        <input type="number" id="baths" name="baths" required><br><br>
+        
+        <label for="facilities">Additional Facilities:</label>
+        <input type="text" id="facilities" name="facilities"><br><br>
+
+        <label for="garden">Presence of Garden or Yard:</label>
+        <input type="checkbox" id="garden" name="garden"><br><br>
+
+        <label for="parking">Parking Availability:</label>
+        <input type="radio" id="parking-yes" name="parking" value="Yes"> Yes
+        <input type="radio" id="parking-no" name="parking" value="No"> No<br><br>
+
+        <label for="image">Add an image:</label>
+        <input type="file" name="uploadfile" value="" />
+
+
+        <input type="submit" name="submit" value="Create Property">
+    </form>
+</body>
+</html>

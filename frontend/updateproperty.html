@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Property</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <h1>Update Property</h1>
+    <form id="property-form" action="../backend/update_property.php" method="POST" enctype="multipart/form-data">
+        <label for="location">Location:</label>
+        <input  type="text" id="location" name="location" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="floor-plan">Floor Plan (Square Footage):</label>
+        <input type="number" id="floor-plan" name="floor_plan" required><br><br>
+
+        <label for="bedrooms">Number of Bedrooms:</label>
+        <input type="number" id="bedrooms" name="bedrooms" required><br><br>
+
+        <label for="facilities">Additional Facilities:</label>
+        <input type="text" id="facilities" name="facilities"><br><br>
+
+        <label for="garden">Presence of Garden:</label>
+        <input type="checkbox" id="garden" name="garden"><br><br>
+
+        <label for="parking">Parking Availability:</label>
+        <input type="radio" id="parking-yes" name="parking" value="Yes"> Yes
+        <input type="radio" id="parking-no" name="parking" value="No"> No<br><br>
+
+        <label for="proximity-facilities">Proximity to Nearby Facilities:</label>
+        <input type="text" id="proximity-facilities" name="proximity_facilities"><br><br>
+
+        <label for="proximity-roads">Proximity to Main Roads:</label>
+        <input type="text" id="proximity-roads" name="proximity_roads"><br><br>
+
+        <label for="property-value">Property Value:</label>
+        <input type="number" id="property-value" name="property_value" required><br><br>
+
+        <label for="image">Update image:</label>
+        <input type="file" name="uploadfile" value="" />
+
+
+        <input type="submit" name="submit" value="Update Property">
+    </form>
+</body>
+</html>
